@@ -1,88 +1,475 @@
+/* Custom CSS for Complex UI Project */
+
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-	font-family: 'Georgia', 'Times New Roman', Times, serif;
-	background: #fff;
-	margin: 0;
-	padding: 0;
-	color: #222;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
 }
 
-.top-section {
-	border: 1px solid #222;
-	border-radius: 0;
-	margin: 16px 12px 32px 12px;
-	padding: 18px 18px 18px 18px;
-	background: #fff;
-	box-shadow: none;
-}
-.blog-title {
-	font-size: 2.5rem;
-	font-weight: bold;
-	margin-bottom: 8px;
-	color: #222;
-	font-family: 'Georgia', 'Times New Roman', Times, serif;
-	text-decoration: underline;
-	text-underline-offset: 4px;
-}
-.blog-desc {
-	font-size: 1.15rem;
-	margin-bottom: 18px;
-	color: #222;
-}
-.read-more {
-	color: #1a0dab;
-	font-weight: 400;
-	font-size: 1.05rem;
-	text-decoration: none;
-	transition: color 0.2s;
-	margin-top: 10px;
-	display: inline-block;
-}
-.read-more:hover {
-	color: #0056b3;
-	text-decoration: underline;
+/* Navigation Styles */
+.navbar {
+  transition: all 0.3s ease;
 }
 
-.image-section {
-	margin: 32px 12px 0 12px;
-}
-.section-title {
-	font-size: 2.1rem;
-	font-weight: bold;
-	margin-bottom: 16px;
-	color: #222;
-	font-family: 'Georgia', 'Times New Roman', Times, serif;
-	text-decoration: underline;
-	text-underline-offset: 4px;
-}
-.beagle-img {
-	width: 350px;
-	border-radius: 0;
-	box-shadow: none;
-	margin-bottom: 12px;
-	margin-top: 10px;
-}
-.more-images {
-	display: inline-block;
-	margin-top: 8px;
-	color: #1a0dab;
-	font-size: 1.05rem;
-	text-decoration: none;
-	font-weight: 400;
-	transition: color 0.2s;
-}
-.more-images:hover {
-	color: #0056b3;
-	text-decoration: underline;
+.navbar-brand {
+  font-size: 1.5rem;
+  color: #333 !important;
 }
 
-.trivia-section {
-	margin: 32px 12px;
+.nav-link {
+  color: #555 !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
 }
-.trivia-list {
-	font-size: 1.15rem;
-	margin-left: 24px;
-	color: #222;
-	line-height: 1.7;
-	font-family: 'Georgia', 'Times New Roman', Times, serif;
+
+.nav-link:hover {
+  color: #007bff !important;
+}
+
+/* Carousel Styles */
+.carousel-section {
+  position: relative;
+  height: 100vh;
+  min-height: 500px;
+}
+
+.carousel-img {
+  height: 100vh;
+  min-height: 500px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  z-index: 10;
+}
+
+.carousel-caption h2 {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption p {
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.carousel-caption .btn {
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+  transition: all 0.3s ease;
+}
+
+.carousel-caption .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.6);
+}
+
+/* Placeholder Image Styles (for non-carousel sections) */
+.placeholder-image {
+  background-color: #C0C0C0 !important;
+  color: #808080 !important;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  font-weight: bold;
+}
+
+.placeholder-image:hover {
+  transform: scale(1.05);
+}
+
+/* Flex Section Styles */
+.flex-section {
+  padding: 2rem 0;
+}
+
+.flex-item {
+  flex: 1;
+  min-width: 300px;
+  max-width: 350px;
+}
+
+.flex-item .placeholder-image {
+  width: 100%;
+  transition: transform 0.3s ease;
+}
+
+.flex-item .placeholder-image:hover {
+  transform: scale(1.05);
+}
+
+/* Complex Grid Layout Styles (Figma Design) */
+.complex-grid-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 15px;
+  margin: 2rem 0;
+  max-width: 100%;
+}
+
+.grid-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.grid-item .placeholder-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.grid-item:hover .placeholder-image {
+  transform: scale(1.05);
+}
+
+/* Large left box spanning 3 rows */
+.large-left {
+  grid-column: 1;
+  grid-row: 1 / 4;
+  height: 500px;
+}
+
+/* Top right grid items */
+.top-right-1 {
+  grid-column: 2;
+  grid-row: 1;
+  height: 150px;
+}
+
+.top-right-2 {
+  grid-column: 3;
+  grid-row: 1;
+  height: 150px;
+}
+
+.top-right-3 {
+  grid-column: 4;
+  grid-row: 1;
+  height: 150px;
+}
+
+/* Middle right grid items */
+.mid-right-1 {
+  grid-column: 2;
+  grid-row: 2;
+  height: 150px;
+}
+
+.mid-right-2 {
+  grid-column: 3;
+  grid-row: 2;
+  height: 150px;
+}
+
+.mid-right-3 {
+  grid-column: 4;
+  grid-row: 2;
+  height: 150px;
+}
+
+/* Bottom large boxes */
+.bottom-left {
+  grid-column: 2 / 3;
+  grid-row: 3;
+  height: 180px;
+}
+
+.bottom-right {
+  grid-column: 3 / 5;
+  grid-row: 3;
+  height: 180px;
+}
+
+/* Photo Gallery Grid Styles */
+.photo-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.photo-gallery-grid img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-gallery-grid img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Section Styles */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1) !important;
+}
+
+.card .placeholder-image {
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 0;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.card-hover:hover .placeholder-image {
+  transform: scale(1.05);
+}
+
+.card-btn {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.card-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Footer Styles */
+footer {
+  margin-top: 4rem;
+}
+
+footer a {
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #007bff !important;
+}
+
+#backToTop {
+  cursor: pointer;
+}
+
+/* Responsive Design */
+
+/* Large screens */
+@media (min-width: 1200px) {
+  .carousel-caption h2 {
+    font-size: 3.5rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 1.25rem;
+  }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 991.98px) {
+  .carousel-section {
+    height: 70vh;
+    min-height: 400px;
+  }
+  
+  .carousel-img {
+    height: 70vh;
+    min-height: 400px;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 2.5rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 1rem;
+  }
+  
+  .flex-section {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flex-item {
+    margin-bottom: 2rem;
+    max-width: 100%;
+  }
+  
+  /* Complex grid for tablets */
+  .complex-grid-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto auto;
+  }
+  
+  .large-left {
+    grid-column: 1 / 3;
+    grid-row: 1;
+    height: 300px;
+  }
+  
+  .top-right-1, .top-right-2 {
+    grid-column: 1;
+    grid-row: 2;
+    height: 120px;
+  }
+  
+  .top-right-3, .mid-right-1 {
+    grid-column: 2;
+    grid-row: 2;
+    height: 120px;
+  }
+  
+  .mid-right-2, .mid-right-3 {
+    grid-column: 1;
+    grid-row: 3;
+    height: 120px;
+  }
+  
+  .bottom-left {
+    grid-column: 2;
+    grid-row: 3;
+    height: 120px;
+  }
+  
+  .bottom-right {
+    grid-column: 1 / 3;
+    grid-row: 4;
+    height: 150px;
+  }
+}
+
+/* Small screens (mobile) */
+@media (max-width: 767.98px) {
+  .carousel-section {
+    height: 60vh;
+    min-height: 350px;
+  }
+  
+  .carousel-img {
+    height: 60vh;
+    min-height: 350px;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .carousel-caption .btn {
+    font-size: 0.9rem;
+    padding: 0.5rem 1.5rem;
+  }
+  
+  /* Complex grid for mobile */
+  .complex-grid-layout {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, auto);
+    gap: 10px;
+  }
+  
+  .large-left,
+  .top-right-1,
+  .top-right-2,
+  .top-right-3,
+  .mid-right-1,
+  .mid-right-2,
+  .mid-right-3,
+  .bottom-left,
+  .bottom-right {
+    grid-column: 1;
+    grid-row: auto;
+    height: 200px;
+  }
+  
+  .flex-item {
+    min-width: 100%;
+  }
+  
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+  
+  .carousel-caption h2 {
+    font-size: 1.5rem;
+  }
+  
+  .carousel-caption p {
+    font-size: 0.8rem;
+  }
+  
+  .carousel-caption .btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 1.2rem;
+  }
+  
+  .photo-gallery-grid img {
+    height: 180px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus styles for better accessibility */
+.btn:focus,
+.nav-link:focus,
+.form-control:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
